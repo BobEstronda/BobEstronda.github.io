@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alessandro Cristoffer | Portfólio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0e0e0e;
+      --bg-soft: #151515;
+      --primary: #00ff88;
+      --text: #ffffff;
+      --text-soft: #a0a0a0;
+      --border: rgba(255,255,255,0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* ===== NAV ===== */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+      background: rgba(14,14,14,0.7);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav strong {
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    nav a {
+      color: var(--text-soft);
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 14px;
+      transition: color .2s;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 140px 24px;
+    }
+
+    h1 {
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    p {
+      color: var(--text-soft);
+      max-width: 700px;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    /* ===== HERO ===== */
+    #home {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #home span {
+      color: var(--primary);
+    }
+
+    /* ===== ABOUT ===== */
+    #about {
+      border-top: 1px solid var(--border);
+    }
+
+    /* ===== SKILLS ===== */
+    #skills {
+      border-top: 1px solid var(--border);
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .skill {
+      border: 1px solid var(--border);
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      color: var(--text-soft);
+    }
+
+    /* ===== Project ===== */
+    #projects {
+      border-top: 1px solid var(--border);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .projects {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--bg-soft);
+      transition: transform .25s, border-color .25s;
+    }
+
+    .projects:hover {
+      transform: translateY(-6px);
+      border-color: var(--primary);
+    }
+
+    .projects img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .projects video {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .projects .content {
+      padding: 20px;
+    }
+
+    .projects h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    /* ===== CONTACT ===== */
+    #contact {
+      border-top: 1px solid var(--border);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--text-soft);
+    }
+
+    /* ===== ANIMATION ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all .6s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      h1 { font-size: 40px; }
+      section { padding: 120px 20px; }
+    }
+
+    .link-github { 
+      color: #6e5494;
+      text-decoration: none; 
+    } 
+    
+    .link-linkedin { 
+      color: #0077b5;
+      text-decoration: none; 
+    } 
+    
+    .link-github:hover, 
+    .link-linkedin:hover { 
+      text-decoration: underline; 
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <strong></strong>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section id="home" class="reveal">
+  <h1><span>Alessandro Cristoffer</span></h1>
+  <p>Game Developer | Game Programmer C++</p>
+</section>
+
+<section id="about" class="reveal">
+  <h2>About</h2>
+  <p>
+    I am a Game Developer specializing in Unreal Engine, 
+    primarily working with C++ and Blueprints. I have experience developing gameplay systems, 
+    advanced animation systems (Animation Blueprint, Motion Warping, Distance Matching, etc.), 
+    internal tools, plugins, and customized solutions for game projects and interactive applications.</p>
+
+  <p>
+    I also work with procedural generation, complex system logic, 
+    performance optimization, and structuring scalable projects. 
+    I have developed plugins and tools for both games and architectural visualization (Archviz).</p>
+</section>
+
+<section id="skills" class="reveal">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">C++: Advanced</div>
+    <div class="skill">Unreal Engine 5: Expert</div>
+    <div class="skill">Networking: Experienced</div>
+    <div class="skill">Gameplay Systems</div>
+  </div>
+</section>
+
+<section id="projects" class="reveal">
+  <h2>Portfolio</h2>
+  <div class="projects">
+    <div class="projects">
+      <img src="img/nicktoons.png" alt="Nicktoons & The Dice of Destiny">
+      <div class="content">
+        <h3>Nicktoons & The Dice of Destiny</h3>
+        <p>Developed by Petit Fabrik</p>
+        <p>Role: Game Developer / Unreal Engine Developer</p>
+      </div>
+    </div>
+
+    <div class="projects">
+      <video autoplay muted loop playsinline>
+          <source src="videos/MultiplayerFPSProject.mp4" type="video/mp4">
+      </video>
+      <div class="content">
+        <h3>Freelancer: FPS Multiplayer</h3>
+        <p>A first-person shooter game template using the "GAS" Gameplay Ability System.</p>
+      </div>
+    </div>
+
+    <div class="projects">
+      <video autoplay muted loop playsinline>
+          <source src="videos/PlataformGameProject.mp4" type="video/mp4">
+      </video>
+      <div class="content">
+        <h3>Freelancer: Platform Game</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="reveal">
+  <h2>Contacts</h2>
+  <p>Email: alessandroalvesbobes@email.com</p>
+  <a href="https://github.com/BobEstronda" class="link-github" target="_blank">GitHub</a> · <a href="https://www.linkedin.com/in/alessandro-alves-20ba561b2/" class="link-linkedin" target="_blank">LinkedIn</a>
+</section>
+
+<footer>
+  © 2026 · Alessandro Cristoffer
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  reveals.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
